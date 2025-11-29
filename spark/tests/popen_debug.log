@@ -1,0 +1,52 @@
+2025-11-29 23:14:24 === START debug_popen_full.py ===
+2025-11-29 23:14:24 Python executable: C:\Users\asus\AppData\Local\Programs\Python\Python310\python3.exe
+2025-11-29 23:14:24 JAVA_HOME: C:\Users\asus\AppData\Local\Programs\Eclipse Adoptium\jdk-11.0.29.7-hotspot\
+2025-11-29 23:14:24 HADOOP_HOME: C:\Hadoop\
+2025-11-29 23:14:24 where java: C:\Users\asus\AppData\Local\Programs\Eclipse Adoptium\jdk-11.0.29.7-hotspot\bin\java.EXE
+2025-11-29 23:14:24 where winutils: C:\Hadoop\bin\winutils.exe
+2025-11-29 23:14:24 CWD: C:\Users\asus\OneDrive\Desktop\Spotify-Project\Data-Engineering\Industrial_Projects\Ride-Analytics-Project\git-clone\data-engineer-project\spark\tests
+2025-11-29 23:14:24 Attempting to create SparkSession...
+2025-11-29 23:14:24 POPEN CALLED: type=str summary=STR first='ver'
+2025-11-29 23:14:24   cwd=C:\Users\asus\OneDrive\Desktop\Spotify-Project\Data-Engineering\Industrial_Projects\Ride-Analytics-Project\git-clone\data-engineer-project\spark\tests
+2025-11-29 23:14:24   first_token_resolved=None exists=False
+2025-11-29 23:14:24   env PATH preview (truncated): C:\Users\asus\AppData\Local\cloud-code\installer\google-cloud-sdk\bin;c:\Users\asus\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\asus\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Users\asus\AppData\Local\Programs\Eclipse Adoptium\jdk-11.0.29.7-hotspot\bin;C:\Users\asus\AppData\Local\Programs\Python\Python310;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MATLAB\R2014a\runtime\win64;C:\Program Files\MATLAB\R2014a\bin;C:\Program Files\MATLAB\R2014a\polyspace\bin;C:\Program Files\Git\cmd;C:\Program Files\NVIDIA Corporation\N
+2025-11-29 23:14:24   full cmd repr (truncated): 'ver'
+2025-11-29 23:14:24 POPEN CALLED: type=list summary=LIST len=6 first='C:\\Users\\asus\\OneDrive\\Desktop\\Spotify Project\\Azure_DE_Project\\spark-3.3.4-bin-hadoop3\\./bin/spark-submit.cmd'
+2025-11-29 23:14:24   cwd=C:\Users\asus\OneDrive\Desktop\Spotify-Project\Data-Engineering\Industrial_Projects\Ride-Analytics-Project\git-clone\data-engineer-project\spark\tests
+2025-11-29 23:14:24   first_token_resolved=None exists=False
+2025-11-29 23:14:24   env PATH preview (truncated): C:\Users\asus\AppData\Local\cloud-code\installer\google-cloud-sdk\bin;c:\Users\asus\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\asus\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Users\asus\AppData\Local\Programs\Eclipse Adoptium\jdk-11.0.29.7-hotspot\bin;C:\Users\asus\AppData\Local\Programs\Python\Python310;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MATLAB\R2014a\runtime\win64;C:\Program Files\MATLAB\R2014a\bin;C:\Program Files\MATLAB\R2014a\polyspace\bin;C:\Program Files\Git\cmd;C:\Program Files\NVIDIA Corporation\N
+2025-11-29 23:14:24   full cmd repr (truncated): ['C:\\Users\\asus\\OneDrive\\Desktop\\Spotify Project\\Azure_DE_Project\\spark-3.3.4-bin-hadoop3\\./bin/spark-submit.cmd', '--conf', 'spark.master=local[1]', '--conf', 'spark.app.name=debug_full', 'pyspark-shell']
+2025-11-29 23:14:24 POPEN RAISED: FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-11-29 23:14:24 POPEN TRACEBACK: Traceback (most recent call last):
+  File "C:\Users\asus\OneDrive\Desktop\Spotify-Project\Data-Engineering\Industrial_Projects\Ride-Analytics-Project\git-clone\data-engineer-project\spark\tests\debug.py", line 59, in patched_popen
+    return _real_popen(*popen_args, **popen_kwargs)
+  File "C:\Users\asus\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\asus\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 1440, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+2025-11-29 23:14:24 SPARK START FAILED: FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-11-29 23:14:24 Full traceback:
+2025-11-29 23:14:24 Traceback (most recent call last):
+  File "C:\Users\asus\OneDrive\Desktop\Spotify-Project\Data-Engineering\Industrial_Projects\Ride-Analytics-Project\git-clone\data-engineer-project\spark\tests\debug.py", line 83, in <module>
+    spark = SparkSession.builder.master("local[1]").appName("debug_full").getOrCreate()
+  File "C:\Users\asus\AppData\Local\Programs\Python\Python310\lib\site-packages\pyspark\sql\session.py", line 497, in getOrCreate
+    sc = SparkContext.getOrCreate(sparkConf)
+  File "C:\Users\asus\AppData\Local\Programs\Python\Python310\lib\site-packages\pyspark\context.py", line 515, in getOrCreate
+    SparkContext(conf=conf or SparkConf())
+  File "C:\Users\asus\AppData\Local\Programs\Python\Python310\lib\site-packages\pyspark\context.py", line 201, in __init__
+    SparkContext._ensure_initialized(self, gateway=gateway, conf=conf)
+  File "C:\Users\asus\AppData\Local\Programs\Python\Python310\lib\site-packages\pyspark\context.py", line 436, in _ensure_initialized
+    SparkContext._gateway = gateway or launch_gateway(conf)
+  File "C:\Users\asus\AppData\Local\Programs\Python\Python310\lib\site-packages\pyspark\java_gateway.py", line 100, in launch_gateway
+    proc = Popen(command, **popen_kwargs)
+  File "C:\Users\asus\OneDrive\Desktop\Spotify-Project\Data-Engineering\Industrial_Projects\Ride-Analytics-Project\git-clone\data-engineer-project\spark\tests\debug.py", line 59, in patched_popen
+    return _real_popen(*popen_args, **popen_kwargs)
+  File "C:\Users\asus\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\asus\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 1440, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+2025-11-29 23:14:24 === END debug_popen_full.py ===
