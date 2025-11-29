@@ -7,7 +7,7 @@ on:
 
 env:
   GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
-  GCS_BUCKET_NAME: ${{ secrets.GCS_BUCKET_NAME || ' ride-analytics-project' }}
+  GCS_BUCKET_NAME: ${{ secrets.GCS_BUCKET_NAME || 'ride-analytics-project' }}
   DATAPROC_CLUSTER_NAME: ${{ secrets.DATAPROC_CLUSTER_NAME || 'cluster-a45d' }}
   COMPOSER_ENVIRONMENT: ${{ secrets.COMPOSER_ENVIRONMENT || 'dev-project' }}
   COMPOSER_REGION: ${{ secrets.COMPOSER_REGION || 'us-central1' }}
